@@ -45,9 +45,10 @@
 							<header class="major">
 								<span class="date">February 01, 2025</span>
 								<h3> Analysing KickStarter Projects </h3>
-								<p><b>Tools</b>: PostgreSQL, Juypter Notebook</p>
+								<!--<p><b>Tools</b>: PostgreSQL, Juypter Notebook</p>-->
 							</header>
 							<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
+							<hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
 							<p><strong>1. Introduction</strong></p>
 							<p>Kickstarter is a global crowdfunding platform designed to help creators bring their projects
 							   to life. It serves as a bridge between individuals or organizations with creative ideas and
@@ -71,6 +72,7 @@
 								<li><b>Development Environment:</b> Jupyter Notebook</li>
 								<!--<li>-</li>-->
 							</ol></p>
+							<hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
 							<p><strong>2. Data Colection and Preparation</strong></p>
 							<p><strong>2.1 Data Source</strong></p>
 							<p>The dataset was originally scraped from Kickstarter’s official website and made publicly
@@ -84,14 +86,15 @@
 								<li><b>Data Importation:</b> The cleaned dataset was imported into a PostgreSQL database
 									 for structured querying and efficient analysis.</li>
 							</ul>
+							<hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
 							<p><strong>3. Data Analysis</strong></p>
 							<p><strong>3.1 Success Rates by Project Category</strong></p>
 							<p>We analyzed the success rates of projects across different main categories.
 								 <b>The top 5 categories with the highest success rates are:</b></p>
 							<!-- Inserting a Table-->
-							 <table border="1">
-								<!-- Table Header-->
-								 <tr>
+							<table border="1">
+							<!-- Table Header-->
+								<tr>
 									<th>Category</th>
 									<th>Success Rate</th>
 								 </tr>
@@ -116,29 +119,115 @@
 									<td>Art</td>
 									<td>41%</td>
 								 </tr>
-							 </table>
-							 <p><b>Insight:</b>Projects in the <b>Dance</b> and <b>Theater</b> categories are more likely to be successfully funded.</p>
-
-
-
-
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Summary of Results</strong></p>
-							<p><ol>
-								<li>Projects that are well funded are most likely to be successful.</li>
-								<li>Projects that are Nearly funded and Not Nearly funded do fail.</li>
+							</table>
+							<p><b>Insight:</b>Projects in the <b>Dance</b> and <b>Theater</b> categories are more likely to be successfully funded.</p>
+							<p><strong>3.2 Success Rates by Country</strong></p>
+							<p>The top 5 countries with the highest project success rates are:</p>
+							<table border="1">
+								<tr>
+									<th>Country</th>
+									<th>Success Rate</th>
+								</tr>
+								<tr>
+									<td>United States</td>
+									<td>37%</td>
+								</tr>
+								<tr>
+									<td>Great Britain</td>
+									<td>36%</td>
+								</tr>
+								<tr>
+									<td>Hong Kong</td>
+									<td>35%</td>
+								</tr>
+								<tr>
+									<td>Denmark</td>
+									<td>32%</td>
+								</tr>
+								<tr>
+									<td>Singapore</td>
+									<td>32%</td>
+								</tr>
+							</table>
+							<p><b>Insight:</b>Projects
+								 launched in the United States have the highest probability of success, followed by Great Britain and Hong Kong.</p>
+							<p><strong>3.3 Effects of Funding Goal on Success Probability</strong></p>
+							<p>We categorized funding goals into four groups and analyzed their impact on success rates:</p>
+							<table border="1">
+								<tr>
+									<th>Goal Category</th>
+									<th>Success Rate</th>
+								</tr>
+								<tr>
+									<td>Small Goal (<= $2,000)</td>
+									<td>48%</td>
+								</tr>
+								<tr>
+									<td>Medium Goal ($2001 - $5200)</td>
+									<td>40%</td>
+								</tr>
+								<tr>
+									<td>Large Goal ($5201 - $16,000)</td>
+									<td>34%</td>
+								</tr>
+								<tr>
+									<td>Mega Goal (> $16,000)</td>
+									<td>20%</td>
+								</tr>
+							</table>
+							<p><b>Insight:</b>Projects with smaller funding goals are more likely to succeed. 
+								The higher the funding goal, the lower the success probability.</p>
+							<p><strong>3.4 Relationship Between Number of Backers and Project Success</strong></p>
+							<p>We categorized projects based on the number of backers:</p>
+							<table border="1">
+								<tr>
+									<th>Backers Category</th>
+									<th>Success Rate</th>
+								</tr>
+								<tr>
+									<td>Large (>= 56)</td>
+									<td>82%</td>
+								</tr>
+								<tr>
+									<td>Medium (12 - 55)</td>
+									<td>51%</td>
+								</tr>
+								<tr>
+									<td>Small (2-11)</td>
+									<td>7%</td>
+								</tr>
+								<tr>
+									<td>Minimal (< 2)</td>
+									<td>0.5%</td>
+								</tr>
+							</table>
+							<p><b>Insight:</b>Projects with a higher number of backers have significantly higher chances of success.</p>
+							<hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
+							<p><strong>4. Key Insights and Recomendations</strong></p>
+							<ul>
+								<li><b>Prioritize High-Success Categories:</b> Dance, Theater, and Comics have the highest success rates,
+									 making them ideal choices for new projects.</li>
+								<li><b>Launch Projects in High-Success Countries:</b> The United States and Great Britain have the best
+									 track records for project success.</li>
+								<li><b>Set Realistic Funding Goals:</b> Smaller funding goals significantly improve the chances of 
+									success. Setting an achievable target is crucial.</li>
+								<li><b>Engage a Large Audience:</b> The number of backers is the strongest indicator of success. Marketing
+									 and outreach efforts should focus on maximizing the number of contributors.</li>
+								<!--<li>-</li>-->
+							</ul>
+							<hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
+							<p><strong>5. Next Steps</strong></p>
+							<p>For deeper analysis we recommend:<ul>
+								<li><b>Predictive Analysis:</b> Building machine learning models to predict the probability of project success
+									 based on input parameters.</li>
+								<li><b>Prescriptive Analysis:</b> Providing actionable recommendations for optimizing funding strategies.</li>
 								<!--<li>-</li>
 								<li>-</li>
 								<li>-</li>-->
-							</ol></p>
+							</ul></p>
+							<p>This project serves as a foundational analysis for understanding Kickstarter success factors,
+								 guiding strategic decision-making for our startup.</p>
+								 <hr style="height: 2px; border-width: 0; color:slategray; background-color: slategray;">
 							<!--<p><strong>Recommendations</strong></p>
 							<p>For our special problem, we were interested in how these different characteristics relate
 								to the total medical cost. We constructed the best possible predictive model 
