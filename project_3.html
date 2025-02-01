@@ -44,35 +44,84 @@
 						<section class="post">
 							<header class="major">
 								<span class="date">February 01, 2025</span>
-								<h3> Analysing KickStarter Data </h3>
+								<h3> Analysing KickStarter Projects </h3>
 								<p><b>Tools</b>: PostgreSQL, Juypter Notebook</p>
 							</header>
 							<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
-							<p><strong>Introduction</strong></p>
-							<p>For this project, we took on the role of a Data Analyst at a startup. 
-								The product team was considering launching a campaign on kickstarters 
-								to test the viability of some offerings. We were tasked to pull data 
-								that would help them understand what might influence the success of the 
-								campaign.</p>
-							<!--<p><strong>Problem Statement</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Questions</strong></p>
-							<p>Specifically, the project was to answer the following questions:<ol>
-								<li>What types of projects are most likely to be successful?</li>
-								<li>Which projects fail?</li>
-								<!--<li>-</li>
-								<li>-</li>
-								<li>-</li>-->
+							<p><strong>1. Introduction</strong></p>
+							<p>Kickstarter is a global crowdfunding platform designed to help creators bring their projects
+							   to life. It serves as a bridge between individuals or organizations with creative ideas and
+							   backers who provide financial support. As data analysts for a startup considering crowdfunding
+							   on Kickstarter, our objective is to analyze past Kickstarter projects to determine key factors
+							    contributing to their success or failure. This analysis will assist our management team in 
+								making data-driven decisions about which projects to launch.</p>
+							<p><strong>1.1 Research Questions</strong></p>
+							<p>We aim to answer the following questions:<ol>
+								<li>What are the success rates across different project categories?</li>
+								<li>Which countries have the highest success rates?</li>
+								<li>How does the funding goal affect a project's probability of success?</li>
+								<li>What is the relationship between the number of backers and a project's success?</li>
+								<!--<li>-</li>-->
 							</ol></p>
-							<!--<p><strong>Methodology</strong></p>
+							<p><strong>Tools</strong></p>
+							<p>The following tools were are used in this projects:<ol>
+								<li><b>Database Management:</b> PostgreSQL</li>
+								<li><b>Programming Language:</b> Python</li>
+								<li><b>Python Libraries:</b> Pandas, psycopg2, SQLAlchemy, Numpy, Matplotlib, Seaborn</li>
+								<li><b>Development Environment:</b> Jupyter Notebook</li>
+								<!--<li>-</li>-->
+							</ol></p>
+							<p><strong>2. Data Colection and Preparation</strong></p>
+							<p><strong>2.1 Data Source</strong></p>
+							<p>The dataset was originally scraped from Kickstarter’s official website and made publicly
+								 available on Kaggle. The dataset was downloaded in <b>CSV</b> format and stored locally for analysis.</p>
+							<p><strong>2.2 Data Cleaning Steps</strong></p>
+							<ul>
+								<li><b>Handling Missing Values:</b> Removed projects with missing names.
+									 Other missing values were handled based on relevance to the analysis.</li>
+								<li><b>Duplicate Removal:</b> Checked and confirmed no duplicates existed in the dataset.</li>
+								<li><b>Column Name Standardization:</b> Renamed columns for consistency and ease of use.</li>
+								<li><b>Data Importation:</b> The cleaned dataset was imported into a PostgreSQL database
+									 for structured querying and efficient analysis.</li>
+							</ul>
+							<p><strong>3. Data Analysis</strong></p>
+							<p><strong>3.1 Success Rates by Project Category</strong></p>
+							<p>We analyzed the success rates of projects across different main categories.
+								 <b>The top 5 categories with the highest success rates are:</b></p>
+							<!-- Inserting a Table-->
+							 <table border="1">
+								<!-- Table Header-->
+								 <tr>
+									<th>Category</th>
+									<th>Success Rate</th>
+								 </tr>
+								 <!--Table rows-->
+								 <tr>
+									<td>Dance</td>
+									<td>62%</td>
+								 </tr>
+								 <tr>
+									<td>Theater</td>
+									<td>60%</td>
+								 </tr>
+								 <tr>
+									<td>Comics</td>
+									<td>54%</td>
+								 </tr>
+								 <tr>
+									<td>Music</td>
+									<td>47%</td>
+								 </tr>
+								 <tr>
+									<td>Art</td>
+									<td>41%</td>
+								 </tr>
+							 </table>
+							 <p><b>Insight:</b>Projects in the <b>Dance</b> and <b>Theater</b> categories are more likely to be successfully funded.</p>
+
+
+
+
 							<p>For our special problem, we were interested in how these different characteristics relate
 								to the total medical cost. We constructed the best possible predictive model 
 								for the cost given some information about the patient.<ol>
