@@ -48,50 +48,42 @@
 								<p><b>Tools</b>: Python [ Pandas | Matplotlib | Seaborn ]</p>
 							</header>
 							<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
-							<p><strong>Introduction</strong></p>
-							<p><b>eBay Kleinanzeign</b> is an online marketplace for classified <b>ads</b> that allow buyers and sellers to meet 
-								and connect locally. With roughly <b>30 million</b> users a month, eBay Kleinanzeign is one of the most 
-								important web services for online advertisements in Germany. On average, the company has more than 
-								<b>50 million</b> advertisements listed across numerous second-hand goods categories. A big company like 
-								this depends on data driven insights and wisdom for its strategic decisions and planning that is 
-								why it collects and store data for almost every activity performed on its website. This project has
-								used data for this company to perform <b>data cleaning, exploration and initial data analysis</b>. 
-							</p>
-							<!--<p><strong>Problem Statement</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Questions</strong></p>
-							<p>The following are the questions the project has answered:<ol>
+							<h3>1. Introduction</h3>
+							<p>This project explores a dataset of used cars listed on eBay Kleinanzeigen, 
+								a German online marketplace for classified ads. The dataset consists of secondhand car
+								 advertisements posted between 2015 and 2016. The goal is to clean and analyze the 
+								 dataset to extract meaningful insights about car sales trends, brand popularity, and 
+								 the relationship between mileage and price.</p>
+							<h4>1.1 Questions</h3>
+							<ol>
 								<li>What are the popular car brands for the period of study?</li>
 								<li>What is the most expensive car on average during the period of study?</li>
 								<li>How do car prices differ by odometer readings on average?</li>
 								<!--<li>-</li>
 								<li>-</li>-->
-							</ol></p>
-							<!--<p><strong>Methodology</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
+							</ol>
+							<h3>2. Methodology</h3>
+							<h4>2.1 Data Exploration and Cleaning</h4>
+							<h4><em>Dataset Overview</em></h4>
+							<ul>
+								<li>The dataset originally contained <b>371,539 rows</b> and <b>20 columns</b>.</li>
+								<li>A random sample of <b>50,000 records</b> was selected for efficient processing and analysis.</li>
+								<!--<li>-</li>
 								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Summary of Results</strong></p>
-							<p><ol>
-								<li>Volkswagen has been found to be the most popular car by brand.</li>
-								<li>Porsche is on average the most expensive brand.</li>
-								<li>Cars with odometer readings of around <b>50,000</b> Kilometers are expensive 
-								on average than cars with odometer readings of at least <b>50,0000</b> Kilometers.</li>
-							</ol></p>
+								<li>-</li>-->
+							</ul>
+							<h4><em>Data Cleaning Steps</em></h4>
+							<ul>
+								<li>Renamed Columns: Converted from camelCase to snake_case for better readability and consistency.</li>
+								<li><b>Handled Missing Values:</b>
+									<ul>
+										<li>Categorical columns with missing values were filled with "Unknown."</li>
+										<li>o	Affected columns included vehicle_type, gear_box, model, fuel_type, and unrepaired_damage.</li>
+									</ul>
+								</li>
+								<li></li>
+								<li></li>
+							</ul>
 							<!--<p><strong>Recommendations</strong></p>
 							<p>For our special problem, we were interested in how these different characteristics relate
 								to the total medical cost. We constructed the best possible predictive model 
