@@ -44,52 +44,76 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">February 01, 2025</span>
-									<h3>Predicting Insurance Costs</h3>
+									<h2>Predicting Insurance Costs</h2>
 									<p><b>Tools</b>: Python [ Pandas, Numpy, Seaborn, Scikit Learn]</p>
 								</header>
+								<hr style="height: 2px; border-width: 0; color:rgba(190, 188, 188, 0.986); background-color: rgba(190, 188, 188, 0.986);">
 								<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
-								<p><strong>Introduction</strong></p>
-								<p>For this project we looked at the Medical Cost Dataset from kaggle. This dataset 
-									contains information on individual medical insurance bills. Each bill is associated with 
-									some demographic and personal characteristics of the person who received it.</p>
-								<p><strong>Problem Statement</strong></p>
+								<h3>1. Introduction</h3>
+								<p>This project aims to predict individual medical insurance costs using the Medical 
+									Costs dataset from Kaggle. The dataset contains demographic and personal 
+									characteristics associated with insurance charges. The primary objective is to
+									 build a predictive model that accurately estimates these costs based on available 
+									 patient data.</p>
+								<h4>1.1 Problem Statement</h4>
 								<p>For our special problem, we were interested in how these different characteristics relate
 									to the total medical cost. We constructed the best possible predictive model 
-									for the cost given some information about the patient.<ol>
+									for the cost given some information about the patient.
+								</p>
+								<hr style="height: 2px; border-width: 0; color:rgba(190, 188, 188, 0.986); background-color: rgba(190, 188, 188, 0.986);">
+								<h3>2. Methodology</h3>
+								<h4>2.1 Data Exploration and Preparation</h4>
+								<h4><em>Checking for Missing Data Points</em></h4>
+								<p>A review of the dataset confirmed that there were no missing values, ensuring data completeness</p>
+								<h4><em>Identifying and Removing Duplicates</em></h4>
+								<p>One duplicate record was found and removed to maintain data integrity.</p>
+								<h4><em>Correlation Analysis</em></h4>
+								<p style="line-height: 0%;">A correlation Analysis revealed that:</p> 
+								<ul>
+									<li>Age and insurance charges had a moderate positive correlation (~30%).</li>
+									<li>BMI and number of children had weak correlations with insurance charges.</li>
+									<li>The distribution of charges was right-skewed, prompting a log transformation to normalize the data.</li>
 									<!--<li>-</li>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
 									<li>-</li>-->
-								</ol></p>
-								<!--<p><strong>Questions</strong></p>
-								<p>For our special problem, we were interested in how these different characteristics relate
-									to the total medical cost. We constructed the best possible predictive model 
-									for the cost given some information about the patient.<ol>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-								</ol></p>-->
-								<!--<p><strong>Methodology</strong></p>
-								<p>For our special problem, we were interested in how these different characteristics relate
-									to the total medical cost. We constructed the best possible predictive model 
-									for the cost given some information about the patient.<ol>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-									<li>-</li>
-								</ol></p>-->
-								<p><strong>Summary of Results</strong></p>
-								<p><ol>
-									<li>A one year increase in a person's age would result into <b>5%</b> increase in insurance charges holding other features constant.</li>
-									<li>If a person is a smoker, his or her insurance charges would increase by <b>822%</b> holding other features constant.</li>
+								</ul>
+								<h4><em>Feature Engineering</em></h4>
+								<ul>
+									<li>A new column, <b>log_charges</b>, was created by applying a logarithmic transformation to the <b>charges</b> column.</li>
+									<li>The categorical <b>smoker</b> variable was converted into a binary format (1 for smokers, 0 for non-smokers).</li>
 									<!--<li>-</li>
 									<li>-</li>
 									<li>-</li>-->
-								</ol></p>
+								</ul>
+								<h4>2.2 Model Building</h4>
+								<h4><em>Data Splitting</em></h4>
+								<ul>
+									<li>The dataset was split into training <b>(80%)</b> and testing <b>(20%)</b> sets.</li>
+									<li>Features selected for the model: <b>age</b> and <b>smoker_yes</b>.</li>
+								</ul>
+								<h4><em>Selection and Training</em></h4>
+								<p>A <b>Linear Regression</b> model was trained using the selected features.</p>
+								<h4><em>Model Evaluation</em></h4>
+								<ul>
+									<li><b>R-Squared value (Goodness of fit)</b>
+										<ul>
+										<li>Training data: <b>72.19%</b></li>
+										<li>Testing data: <b>79.97%</b></li>
+										</ul>
+									<li>The model explains a significant portion of variance in insurance costs,
+									 indicating a strong predictive capability.</li>
+								</ul>
+								<h4>2.3 Interpretation of Coefficients</h4>
+								<ul>
+									<li><b>Age:</b> A one-year increase in age results in a <b>5%</b> increase in insurance charges.</li>
+									<li><b>Smoking:</b> Being a smoker increases insurance charges by <b>822%</b>, highlighting the impact 
+										of smoking on insurance costs.</li>
+								</ul>
+								<hr style="height: 2px; border-width: 0; color:rgba(190, 188, 188, 0.986); background-color: rgba(190, 188, 188, 0.986);">
+								<h3>3. Conclusion</h3>
+								<p>This project successfully developed a regression model that predicts insurance costs based on age and 
+									smoking status. While the model performs well, further improvements can be achieved by incorporating
+									 additional features such as BMI and region. Additionally, exploring alternative machine learning 
+									 models could enhance predictive performance.</p>
 								<!--<p><strong>Recommendations</strong></p>
 								<p>For our special problem, we were interested in how these different characteristics relate
 									to the total medical cost. We constructed the best possible predictive model 
