@@ -43,63 +43,81 @@
 						<!-- Post -->
 						<section class="post">
 							<header class="major">
-								<span class="date">February 01, 2025</span>
-								<h3> Bike Share Sales analysis </h3>
-								<p><b>Tools</b>: Excel</p>
+								<span class="date">March 07, 2025</span>
+								<h3>Investigating Covid-19 Virus Trends (January 2020 - July 2020)</h3>
+								<p><b>Tools</b>: Python</p>
 							</header>
 							<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
-							<p><strong>Introduction</strong></p>
-							<p>This project was about analysing Bike Share sales to determine which factors are more likely 
-								to make a person own a bike or not. We used demographic and social-economic attributes for our analysis.</p>
-							<!--<p><strong>Problem Statement</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Questions</strong></p>
-							<p>The project was set to answer the following questions:<ol>
-								<li>How does monthly income affect bike ownership?</li>
-								<li>How does age affect bike ownership?</li>
-								<li>Does commute distance determine bike ownership?</li>
-								<!--<li>-</li>
-								<li>-</li>-->
-							</ol></p>
-							<!--<p><strong>Methodology</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
-							<p><strong>Summary of Results</strong></p>
-							<p><ol>
-								<li>People who earned a high income were more likely to own a bike.</li>
-								<li>Middle aged people were more likely to own a bike.</li>
-								<li>People with a short commute distance were more likely to own a bike.</li>
-								<!--<li>-</li>
-								<li>-</li>-->
-							</ol></p>
-							<!--<p><strong>Recommendations</strong></p>
-							<p>For our special problem, we were interested in how these different characteristics relate
-								to the total medical cost. We constructed the best possible predictive model 
-								for the cost given some information about the patient.<ol>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-								<li>-</li>
-							</ol></p>-->
+							<h3> 1. Project Overview</h3>
+							<p>This project analyzes the early trends of COVID-19 in various countries during the initial six months of the pandemic, 
+								from January 2020 to July 2020. Using a dataset sourced from Kaggle, the study explores the spread and impact of the 
+								virus across different nations. The key objectives include identifying the most affected countries, examining testing 
+								efforts, and evaluating COVID-19's impact relative to population size.
+							</p>
+							<h3> 2. Project Questions</h3>
+							<p>The analysis aims to answer the following questions:</p> 
+							<ol>
+								<li>Which countries had the highest number of deaths due to COVID-19?</li>
+								<li>Which countries recorded the highest number of positive cases relative to tests conducted?</li>
+								<li>Which countries demonstrated the best testing efforts relative to their population?</li>
+								<li>Which countries were most and least affected relative to their population?</li>
+							</ol>
+							<h3> 3. Understanding Data</h3>
+							<h4> 3.1 Dataset Overview </h4>
+							<p>The dataset consists of 10,903 rows and 14 columns, including variables such as positive cases, deaths,
+								 recoveries, total tests, and active cases. Importantly, the dataset contains no missing values or duplicates.</p>
+							<h4> 3.2 Key Variables</h4>
+							<ul>
+								<li><em>positive</em>: Cumulative number of positive cases reported.</li>
+								<li><em>death</em>: Cumulative number of deaths reported.</li>
+								<li><em>total_tested</em>: Total number of COVID-19 tests conducted.</li>
+								<li><em>daily_positive</em>: Number of positive cases reported daily.</li>
+								<li><em>daily_tested</em>: Number of tests conducted daily.</li>
+								<li><em>active</em>: Number of active cases on a given day.</li>
+							</ul>
+							<h3> 4. Data Cleaning</h3>
+							<p>To prepare the dataset for analysis, the following steps were performed:</p>
+							<ul>
+								<li>Standardized column names.</li>
+								<li>Converted the date column to datetime format.</li>
+								<li>Filtered data to retain only country-level records (excluding state/provincial data).</li>
+								<li>Created two subsets:<ol>
+									<li><b>Cumulative data</b> (Total cases, deaths, and recoveries per country).</li>
+									<li><b>Daily data</b> (New cases, new tests, and active cases per day).</li>
+								</ol></li>
+							</ul>
+							<h3> 5. Key Findings and Visualization</h3>
+							<h4> 5.1 Countries with the Highest Deaths</h4>
+							<p>Top 3 countries with the highest cumulative deaths:</p>
+							<ol>
+								<li><b>United States</b> - 98,536 deaths</li>
+								<li><b>Italy</b> - 33,415 deaths</li>
+								<li><b>United Kingdom</b> - 33,186 deaths</li>
+							</ol>
+							<h4> 5.2 Countries with the Highest Positivity Rates</h4>
+							<p>Top 3 countries with the highest <b>positivity rates</b></p>
+							<ol>
+								<li><b>United Kingdom</b> - 11.3%</li>
+								<li><b>United States</b> - 10.8%</li>
+								<li><b>Turkey</b> - 8.1%</li>
+							</ol>
+							<h4> 5.3 Countries with the Highest Testing Efforts</h4>
+							<p>Proportion of the population tested:</p>
+							<ol>
+								<li><b>Russia</b> - 7.2%</li>
+								<li><b>Italy</b> - 6.8%</li>
+								<li><b>United States</b> - 5.2%</li>
+							</ol>
+							<h4> 5.4 Most & Least Affected Countries (Per Population)</h4>
+							<p>To assess the relative impact of COVID-19, rankings were calculated based on
+								 active cases, hospitalizations, and positivity rates per capita.</p>
+							<ul>
+								<li>Most affected country: <b>Italy</b></li>
+								<li>Least affected country: <b>India</b></li>
+							</ul>
 							<p style="font-weight: bold; text-align: center;">For more details, please refer to the full analysis by clicking on the following button:</p>
 							<ul class="actions special">
-								<li><a href="https://1drv.ms/x/c/c9ffcb8dd652be72/EUfTuYxQa3tDhVoieijtMQwBbRJnGV-OfAOggvIoNP0Rkg?e=1nVASS" class="button" target="_blank" style="background-color: rgb(0, 204, 255);">Go To Analysis</a></li>
+								<li><a href="https://github.com/mcbrownmwale/Covid_19/blob/main/Covid-19.ipynb" class="button" target="_blank" style="background-color: rgb(0, 204, 255);">Go To Analysis</a></li>
 							</ul>
 							<hr style="height: 2px; border-width: 0; color:rgba(190, 188, 188, 0.986); background-color: rgba(190, 188, 188, 0.986);">
 						</section>
