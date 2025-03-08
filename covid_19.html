@@ -43,8 +43,8 @@
 						<!-- Post -->
 						<section class="post">
 							<header class="major">
-								<span class="date">March 07, 2025</span>
-								<h3>Investigating Covid-19 Virus Trends (January 2020 - July 2020)</h3>
+								<span class="date">March 07<sup>th</sup>, 2025</span>
+								<h2>Investigating Covid-19 Virus Trends (January 2020 - July 2020)</h2>
 								<p><b>Tools</b>: Python</p>
 							</header>
 							<!--<div class="image main"><img src="images/analytics 1.jfif" alt="" /></div> -->
@@ -68,12 +68,12 @@
 								 recoveries, total tests, and active cases. Importantly, the dataset contains no missing values or duplicates.</p>
 							<h4> 3.2 Key Variables</h4>
 							<ul>
-								<li><em>positive</em>: Cumulative number of positive cases reported.</li>
-								<li><em>death</em>: Cumulative number of deaths reported.</li>
-								<li><em>total_tested</em>: Total number of COVID-19 tests conducted.</li>
-								<li><em>daily_positive</em>: Number of positive cases reported daily.</li>
-								<li><em>daily_tested</em>: Number of tests conducted daily.</li>
-								<li><em>active</em>: Number of active cases on a given day.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">positive</span></em>: Cumulative number of positive cases reported.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">death</span></em>: Cumulative number of deaths reported.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">total_tested</span></em>: Total number of COVID-19 tests conducted.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">daily_positive</span></em>: Number of positive cases reported daily.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">daily_tetsted</span></em>: Number of tests conducted daily.</li>
+								<li><em><span style="background-color: rgb(241, 237, 237);">active</span></em>: Number of active cases on a given day.</li>
 							</ul>
 							<h3> 4. Data Cleaning</h3>
 							<p>To prepare the dataset for analysis, the following steps were performed:</p>
@@ -88,27 +88,44 @@
 							</ul>
 							<h3> 5. Key Findings and Visualization</h3>
 							<h4> 5.1 Countries with the Highest Deaths</h4>
-							<p>Top 3 countries with the highest cumulative deaths:</p>
-							<ol>
-								<li><b>United States</b> - 98,536 deaths</li>
-								<li><b>Italy</b> - 33,415 deaths</li>
-								<li><b>United Kingdom</b> - 33,186 deaths</li>
-							</ol>
-							<h4> 5.2 Countries with the Highest Positivity Rates</h4>
-							<p>Top 3 countries with the highest <b>positivity rates</b></p>
-							<ol>
-								<li><b>United Kingdom</b> - 11.3%</li>
-								<li><b>United States</b> - 10.8%</li>
-								<li><b>Turkey</b> - 8.1%</li>
-							</ol>
-							<h4> 5.3 Countries with the Highest Testing Efforts</h4>
+							<p>Top 10 countries with the highest cumulative deaths:</p>
+							
+							<div class="center"><img src="Images/covid_cum.png" alt="" width="350" height="400" /></div>
+							<h4> 5.2 Countries with Higher Volumes of Covid-19 Tests</h4>
+							<div class="center"><img src="Images/covid_vol.png" alt="" width="350" height="400" /></div>
+							<h4> 5.3 Countries with the Highest Positivity Rates</h4>
+							<p>Top 10 countries with the highest <b>positivity rates</b></p>
+							<div class="center"><img src="Images/covid_pos.png" alt="" width="350" height="400" /></div>
+							<h4> 5.4 Countries with the Highest Testing Efforts</h4>
 							<p>Proportion of the population tested:</p>
-							<ol>
-								<li><b>Russia</b> - 7.2%</li>
-								<li><b>Italy</b> - 6.8%</li>
-								<li><b>United States</b> - 5.2%</li>
-							</ol>
-							<h4> 5.4 Most & Least Affected Countries (Per Population)</h4>
+							<table border="1">
+								<!--<caption>Success Rate by Country</caption>-->
+								<tr>
+									<th>Country</th>
+									<th>Population Percent Tested</th>
+								</tr>
+								<tr>
+									<td>Russia</td>
+									<td>7.2%</td>
+								</tr>
+								<tr>
+									<td>Italy</td>
+									<td>6.8%</td>
+								</tr>
+								<tr>
+									<td>United States</td>
+									<td>5.2%</td>
+								</tr>
+								<tr>
+									<td>Australia</td>
+									<td>4.9</td>
+								</tr>
+								<tr>
+									<td>Canada</td>
+									<td>4.4%</td>
+								</tr>
+							</table>
+							<h4> 5.5 Most & Least Affected Countries (Per Population)</h4>
 							<p>To assess the relative impact of COVID-19, rankings were calculated based on
 								 active cases, hospitalizations, and positivity rates per capita.</p>
 							<ul>
